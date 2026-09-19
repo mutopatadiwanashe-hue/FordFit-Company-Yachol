@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Contact | FordFit Company Yachol{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h1>Let's talk about your Ford.</h1>
+    <p>Call or WhatsApp FordFit Company Yachol.</p>
+    <div class="actions">
+      <a class="btn primary" href="tel:+263780129773">+263 780 129 773</a>
+      <a class="btn ghost" href="https://wa.me/263780129773" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-layout">
+  <div class="contact-card reveal">
+    <div><h2>FordFit Company Yachol</h2><p>Independent Ford Specialist</p></div>
+    <div><strong>Phone</strong><a href="tel:+263780129773">+263 780 129 773</a></div>
+    <div><strong>Enquiries</strong><p>Use WhatsApp for a quick response.</p></div>
+  </div>
+
+  <form class="contact-form reveal d1" id="enquiry-form" novalidate>
+    <h2>Send an enquiry</h2>
+    <p>Fill this in and we'll open WhatsApp with your message ready to send.</p>
+    <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+    <div class="field"><label for="f-vehicle">Your vehicle</label><input id="f-vehicle" name="vehicle" type="text" placeholder="e.g. Ford Ranger 2019"></div>
+    <div class="field">
+      <label for="f-topic">What do you need?</label>
+      <select id="f-topic" name="topic">
+        <option>Vehicle servicing</option>
+        <option>Ford diagnostics</option>
+        <option>Brakes &amp; suspension</option>
+        <option>Oil &amp; lubricants</option>
+        <option>Filters</option>
+        <option>Something else</option>
+      </select>
+    </div>
+    <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Tell us a little more…"></textarea></div>
+    <button class="btn solid-dark" type="submit">Continue on WhatsApp →</button>
+    <p class="form-note">Nothing is stored on this website — the form only prepares a WhatsApp message.</p>
+  </form>
+</section>
+{% endblock %}

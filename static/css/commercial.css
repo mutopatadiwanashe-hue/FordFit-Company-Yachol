@@ -1,0 +1,443 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #030508;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.commercial-stage {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 25%, #344052 0%, #101722 38%, #020304 100%);
+}
+
+/* DRAMATIC LIGHT */
+.commercial-light {
+    position: absolute;
+    width: 70vw;
+    height: 70vw;
+    left: 15%;
+    top: -45%;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,.20),
+        rgba(255,255,255,.04) 35%,
+        transparent 70%
+    );
+    filter: blur(10px);
+}
+
+/* BACKGROUND */
+.commercial-backdrop {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(255,255,255,.04),
+            transparent 30%,
+            rgba(255,255,255,.07)
+        ),
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(0,0,0,.85)
+        );
+}
+
+/* INTRO TEXT */
+.commercial-copy {
+    position: absolute;
+    z-index: 6;
+    left: 8%;
+    top: 15%;
+    max-width: 700px;
+    animation: introText 1.2s ease forwards;
+}
+
+.commercial-eyebrow {
+    font-size: 13px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    color: #d7dce2;
+}
+
+.commercial-copy h1 {
+    margin: 15px 0;
+    font-size: clamp(42px, 7vw, 90px);
+    line-height: .9;
+    font-weight: 900;
+    letter-spacing: -4px;
+}
+
+.commercial-copy p:last-child {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #c7cdd5;
+}
+
+/* ROAD */
+.commercial-road {
+    position: absolute;
+    z-index: 1;
+    left: -10%;
+    right: -10%;
+    bottom: -5%;
+    height: 43%;
+    transform:
+        perspective(600px)
+        rotateX(58deg);
+    transform-origin: bottom;
+    background:
+        linear-gradient(
+            180deg,
+            #20252c,
+            #050608
+        );
+}
+
+/* MOVING ROAD MARKINGS */
+.road-line {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: 42%;
+    height: 12px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 80px,
+            rgba(255,255,255,.9) 80px 220px,
+            transparent 220px 320px
+        );
+    animation: roadMove .65s linear infinite;
+    opacity: .65;
+}
+
+/* CAR */
+.commercial-car {
+    position: absolute;
+    z-index: 10;
+    width: min(850px, 75vw);
+    right: -900px;
+    bottom: 17%;
+
+    filter:
+        drop-shadow(0 25px 20px rgba(0,0,0,.75))
+        drop-shadow(0 0 18px rgba(255,255,255,.08));
+
+    animation:
+        driveCar 5.2s cubic-bezier(.18,.75,.25,1) forwards;
+}
+
+/* ACTUAL CAR IMAGE */
+.commercial-car img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    animation:
+        suspension 0.16s ease-in-out infinite alternate;
+}
+
+/* SPEED TRAIL */
+.commercial-car::after {
+    content: "";
+    position: absolute;
+    left: -35%;
+    top: 45%;
+    width: 50%;
+    height: 18%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
+    filter: blur(15px);
+    opacity: 0;
+    animation: speedTrail 5.2s ease-in-out forwards;
+}
+
+/* TIRE REVEAL */
+.tire-reveal {
+    position: absolute;
+    z-index: 7;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 0%,
+            transparent 35%,
+            rgba(0,0,0,.85) 75%
+        );
+
+    opacity: 0;
+
+    animation:
+        revealDarkness 5.2s ease forwards;
+}
+
+/* FINAL BRAND */
+.fordfit-final {
+    position: absolute;
+    z-index: 20;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(.65);
+
+    animation:
+        logoReveal 1.4s 5.2s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.fordfit-small {
+    font-size: 16px;
+    letter-spacing: 10px;
+    color: #dce1e6;
+}
+
+.fordfit-final strong {
+    font-size: clamp(60px, 13vw, 170px);
+    line-height: .85;
+    letter-spacing: -7px;
+    font-weight: 1000;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #d4d9df 35%,
+            #7d8792 65%,
+            #343a42 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow:
+        0 15px 40px rgba(0,0,0,.8);
+}
+
+.fordfit-tagline {
+    margin-top: 22px;
+    font-size: 18px;
+    letter-spacing: 10px;
+    color: #eeeeee;
+}
+
+/* INFORMATION */
+.commercial-info {
+    padding: 70px 8%;
+    background: #080b10;
+    text-align: center;
+}
+
+.commercial-info p {
+    letter-spacing: 5px;
+    color: #aeb5bf;
+}
+
+.commercial-info h2 {
+    font-size: clamp(28px, 5vw, 55px);
+}
+
+/* CAR DRIVING */
+@keyframes driveCar {
+
+    0% {
+        right: -900px;
+        transform:
+            translateY(20px)
+            scale(.88)
+            rotate(0deg);
+    }
+
+    15% {
+        right: 72%;
+        transform:
+            translateY(4px)
+            scale(.95)
+            rotate(-1deg);
+    }
+
+    30% {
+        right: 48%;
+        transform:
+            translateY(-3px)
+            scale(1)
+            rotate(.5deg);
+    }
+
+    55% {
+        right: 18%;
+        transform:
+            translateY(2px)
+            scale(1.03)
+            rotate(-.4deg);
+    }
+
+    75% {
+        right: -10%;
+        transform:
+            translateY(-4px)
+            scale(1.05)
+            rotate(.8deg);
+    }
+
+    100% {
+        right: 120%;
+        transform:
+            translateY(10px)
+            scale(1.1)
+            rotate(-1deg);
+    }
+}
+
+/* SUSPENSION */
+@keyframes suspension {
+
+    0% {
+        transform: translateY(-1px);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+/* ROAD MOVEMENT */
+@keyframes roadMove {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(320px);
+    }
+}
+
+/* SPEED EFFECT */
+@keyframes speedTrail {
+
+    0% {
+        opacity: 0;
+        transform: scaleX(.3);
+    }
+
+    25% {
+        opacity: .15;
+    }
+
+    45% {
+        opacity: .45;
+        transform: scaleX(1);
+    }
+
+    75% {
+        opacity: .65;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleX(1.8);
+    }
+}
+
+/* DARK TRANSITION */
+@keyframes revealDarkness {
+
+    0% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: .85;
+    }
+}
+
+/* LOGO */
+@keyframes logoReveal {
+
+    0% {
+        opacity: 0;
+        transform: scale(.65);
+        filter: blur(12px);
+    }
+
+    60% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* INTRO */
+@keyframes introText {
+
+    0% {
+        opacity: 0;
+        transform: translateY(45px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    .commercial-copy {
+        left: 6%;
+        right: 6%;
+        top: 12%;
+    }
+
+    .commercial-copy h1 {
+        letter-spacing: -2px;
+    }
+
+    .commercial-car {
+        width: 105vw;
+        bottom: 20%;
+    }
+
+    .fordfit-small {
+        font-size: 11px;
+        letter-spacing: 5px;
+    }
+
+    .fordfit-tag

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Services | FordFit Company Yachol{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Ford support</p>
+    <h1>Specialist automotive services.</h1>
+    <p>Service categories can be updated with FordFit's exact workshop offering.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="service-grid">
+    <article class="reveal"><span>01</span><h2>Ford Diagnostics</h2><p>Diagnostic support for Ford vehicles and fault-finding.</p></article>
+    <article class="reveal d1"><span>02</span><h2>Vehicle Servicing</h2><p>Routine maintenance and oil/filter service support.</p></article>
+    <article class="reveal d2"><span>03</span><h2>Brakes &amp; Suspension</h2><p>Maintenance support for braking and suspension components.</p></article>
+    <article class="reveal"><span>04</span><h2>Engine &amp; Lubricants</h2><p>Oil and lubricant products matched to vehicle requirements.</p></article>
+    <article class="reveal d1"><span>05</span><h2>Electrical Support</h2><p>Electrical diagnostic and vehicle system support.</p></article>
+    <article class="reveal d2"><span>06</span><h2>Parts &amp; Consumables</h2><p>Access to selected automotive products and brands.</p></article>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="section-heading reveal">
+    <p class="eyebrow">How it works</p>
+    <h2>Getting help is simple.</h2>
+  </div>
+  <ol class="steps">
+    <li class="reveal"><h3>Reach out</h3><p>Call or WhatsApp FordFit Company Yachol.</p></li>
+    <li class="reveal d1"><h3>Tell us your Ford</h3><p>Share the model and what you need.</p></li>
+    <li class="reveal d2"><h3>We match it</h3><p>Service support and products matched to your vehicle.</p></li>
+    <li class="reveal d3"><h3>Drive on</h3><p>Back on the road with confidence.</p></li>
+  </ol>
+</section>
+
+<section class="cta">
+  <h2>Not sure what you need?</h2>
+  <p>Tell us about your vehicle and we'll point you the right way.</p>
+  <a class="btn primary" href="{{ url_for('contact') }}">Start an enquiry</a>
+</section>
+{% endblock %}

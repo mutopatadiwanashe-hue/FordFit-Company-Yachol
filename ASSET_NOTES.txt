@@ -1,0 +1,17 @@
+FordFit Company Yachol asset notes
+
+CEO:
+- static/images/ceo-original.jpg = original supplied CEO photo. Do not AI-edit.
+- It is only resized/cropped by CSS when displayed.
+
+Products:
+- castrol-original.jpg
+- mixed-products-original.jpg
+- fuchs-gt1-original.jpg
+- fuchs-supersyn-original.jpg
+These are the supplied product photographs.
+
+Vehicle:
+- car-original-screenshot.jpg = exact supplied screenshot.
+- car-original-crop.jpg = crop of the supplied screenshot to remove the social-media UI.
+- car-branded-concept.png = AI-generated concept created earlier for the requested branded car/showroom visual. It is not the original vehicle photograph.

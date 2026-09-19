@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}About | FordFit Company Yachol{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">About FordFit</p>
+    <h1>Ford specialist, built around service.</h1>
+    <p>FordFit Company Yachol is an independent Ford specialist company.</p>
+  </div>
+</section>
+
+<section class="split-section ceo-section about-grid">
+  <figure class="ceo-figure reveal">
+    <div class="ceo-frame">
+      <img src="{{ url_for('static', filename='images/ceo-original.jpg') }}" alt="CEO of FordFit Company Yachol" width="1152" height="1536">
+    </div>
+    <figcaption><strong>Chief Executive Officer</strong><span>FordFit Company Yachol</span></figcaption>
+  </figure>
+  <div class="split-copy reveal d1">
+    <p class="eyebrow">Our CEO</p>
+    <h2>Leadership</h2>
+    <p>Our CEO is presented using the original photograph supplied for this website. No AI face generation or retouching is applied.</p>
+    <div class="stat-row">
+      <div><strong>Ford</strong><span>Specialist focus</span></div>
+      <div><strong>7</strong><span>Featured product brands</span></div>
+      <div><strong>24/7</strong><span>Online enquiry access</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section values">
+  <div class="section-heading reveal">
+    <p class="eyebrow">What we stand for</p>
+    <h2>Our working principles.</h2>
+  </div>
+  <div class="feature-grid">
+    <article class="reveal"><h3>Specialist focus</h3><p>We concentrate on Ford vehicles so the advice and support you get is relevant to what you drive.</p></article>
+    <article class="reveal d1"><h3>Quality products</h3><p>We feature recognised lubricant, filter and brake brands, shown with real photographs.</p></article>
+    <article class="reveal d2"><h3>Reliable service</h3><p>Clear communication and easy contact by phone or WhatsApp.</p></article>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Let's talk about your Ford.</h2>
+  <p>Call or WhatsApp FordFit Company Yachol.</p>
+  <a class="btn primary" href="{{ url_for('contact') }}">Contact us</a>
+</section>
+{% endblock %}

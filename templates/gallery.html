@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Gallery | FordFit Company Yachol{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Real FordFit assets</p>
+    <h1>Vehicles, products and people.</h1>
+    <p>Authentic photographs supplied for the FordFit website. Tap a photo to view it larger.</p>
+  </div>
+</section>
+
+<section class="gallery-masonry">
+  <figure class="gallery-item car"><img src="{{ url_for('static', filename='images/car-original-crop.jpg') }}" alt="Vehicle supplied for FordFit" loading="lazy"><figcaption>Vehicle</figcaption></figure>
+  <figure class="gallery-item ceo"><img src="{{ url_for('static', filename='images/ceo-original.jpg') }}" alt="FordFit CEO" loading="lazy" width="1152" height="1536"><figcaption>Our CEO</figcaption></figure>
+  <figure class="gallery-item"><img src="{{ url_for('static', filename='images/castrol-original.jpg') }}" alt="Castrol product" loading="lazy"><figcaption>Castrol</figcaption></figure>
+  <figure class="gallery-item"><img src="{{ url_for('static', filename='images/fuchs-gt1-original.jpg') }}" alt="Fuchs product" loading="lazy"><figcaption>Fuchs TITAN GT1</figcaption></figure>
+  <figure class="gallery-item"><img src="{{ url_for('static', filename='images/fuchs-supersyn-original.jpg') }}" alt="Fuchs product" loading="lazy"><figcaption>Fuchs TITAN SUPERSYN</figcaption></figure>
+  <figure class="gallery-item"><img src="{{ url_for('static', filename='images/mixed-products-original.jpg') }}" alt="Automotive products" loading="lazy"><figcaption>Filters &amp; fluids</figcaption></figure>
+</section>
+{% endblock %}
