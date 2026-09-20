@@ -527,3 +527,454 @@ ul{margin:0;padding:0;list-style:none}
         padding: 24px;
     }
 }
+/* =========================================================
+   FORDFIT HOMEPAGE — CINEMATIC DRIVE EXPERIENCE
+   This block only controls the new homepage hero.
+   ========================================================= */
+
+.hero {
+    min-height: 100svh;
+    height: 100svh;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    display: block;
+    padding: 0;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(30,90,60,.25), transparent 45%),
+        linear-gradient(180deg, #06101f 0%, #0b1d36 55%, #030912 100%);
+}
+
+/* Cinematic background */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -5;
+    background:
+        linear-gradient(180deg, rgba(3,9,18,.15), rgba(3,9,18,.65)),
+        radial-gradient(circle at 50% 45%, rgba(211,242,58,.08), transparent 45%);
+}
+
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, transparent 0%, rgba(255,255,255,.035) 50%, transparent 100%);
+    animation: cinematicLight 5s ease-in-out infinite;
+}
+
+/* Green cinematic glow */
+.hero-glow {
+    position: absolute;
+    width: 60vw;
+    height: 30vw;
+    max-width: 800px;
+    max-height: 400px;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: rgba(211,242,58,.08);
+    filter: blur(80px);
+    z-index: -2;
+}
+
+/* Opening title */
+.hero-commercial-text {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 30%;
+    width: 90%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: openingText 5s ease forwards;
+    pointer-events: none;
+}
+
+.hero-commercial-text span {
+    display: block;
+    color: var(--hivis);
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: .28em;
+    margin-bottom: 18px;
+}
+
+.hero-commercial-text h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    line-height: .86;
+    letter-spacing: -.07em;
+    text-shadow: 0 10px 40px rgba(0,0,0,.55);
+}
+
+.hero-commercial-text h1 em {
+    color: var(--hivis);
+    font-style: normal;
+}
+
+.hero-commercial-text p {
+    margin-top: 22px;
+    color: rgba(255,255,255,.72);
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+}
+
+/* Road */
+.hero-road {
+    position: absolute;
+    z-index: -1;
+    left: -10%;
+    right: -10%;
+    bottom: -8%;
+    height: 42%;
+    transform: perspective(500px) rotateX(58deg);
+    transform-origin: bottom;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.95),
+            rgba(18,25,34,.98) 50%,
+            rgba(0,0,0,.95)
+        );
+    border-top: 2px solid rgba(255,255,255,.08);
+    box-shadow: 0 -20px 80px rgba(0,0,0,.65);
+}
+
+.hero-road::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 12%,
+            rgba(255,255,255,.035) 12.2% 12.5%,
+            transparent 12.7% 25%
+        );
+}
+
+/* Moving road markings */
+.road-line {
+    position: absolute;
+    width: 180px;
+    height: 10px;
+    background: rgba(255,255,255,.65);
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(255,255,255,.12);
+    animation: roadSpeed 1s linear infinite;
+}
+
+.line-1 { top: 5%; animation-delay: -.1s; }
+.line-2 { top: 25%; animation-delay: -.3s; }
+.line-3 { top: 45%; animation-delay: -.5s; }
+.line-4 { top: 65%; animation-delay: -.7s; }
+.line-5 { top: 85%; animation-delay: -.9s; }
+
+/* The actual driving car */
+.hero-car-motion {
+    position: absolute;
+    z-index: 3;
+    left: -45%;
+    bottom: 22%;
+    width: clamp(380px, 58vw, 780px);
+    animation:
+        realisticDrive 5.2s cubic-bezier(.18,.65,.22,1) forwards;
+    will-change: left, transform, opacity;
+}
+
+.hero-car-motion img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter:
+        drop-shadow(0 28px 25px rgba(0,0,0,.7))
+        drop-shadow(0 0 35px rgba(211,242,58,.08));
+    transform-origin: center bottom;
+    animation: suspension 0.18s ease-in-out infinite alternate;
+}
+
+/* Moving shadow underneath vehicle */
+.car-shadow {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    bottom: -7%;
+    height: 14%;
+    border-radius: 50%;
+    background: rgba(0,0,0,.8);
+    filter: blur(18px);
+    animation: shadowMotion .18s ease-in-out infinite alternate;
+}
+
+/* Company reveal after car exits */
+.hero-company-reveal {
+    position: absolute;
+    z-index: 6;
+    left: 50%;
+    top: 45%;
+    width: 90%;
+    transform: translate(-50%, -50%) scale(.75);
+    text-align: center;
+    opacity: 0;
+    animation: companyReveal 1.4s cubic-bezier(.2,.8,.2,1) 4.35s forwards;
+}
+
+.hero-company-reveal small {
+    display: block;
+    color: var(--hivis);
+    font-weight: 800;
+    font-size: .78rem;
+    letter-spacing: .35em;
+    margin-bottom: 15px;
+}
+
+.hero-company-reveal strong {
+    display: block;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 11vw, 10rem);
+    line-height: .78;
+    letter-spacing: -.08em;
+    text-shadow: 0 15px 50px rgba(0,0,0,.65);
+}
+
+.hero-company-reveal > span {
+    display: block;
+    margin-top: 18px;
+    color: rgba(255,255,255,.78);
+    font-weight: 700;
+    letter-spacing: .4em;
+    font-size: clamp(.75rem, 1.5vw, 1rem);
+}
+
+.reveal-line {
+    width: 0;
+    height: 4px;
+    margin: 25px auto 0;
+    background: var(--hivis);
+    border-radius: 10px;
+    animation: revealLine .8s ease 5.2s forwards;
+}
+
+/* Buttons appear after the reveal */
+.hero-actions {
+    position: absolute;
+    z-index: 8;
+    left: 50%;
+    bottom: 9%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: actionsReveal 1s ease 5.1s forwards;
+}
+
+/* ---------- Cinematic animations ---------- */
+
+@keyframes realisticDrive {
+    0% {
+        left: -48%;
+        opacity: 0;
+        transform: scale(.82) translateY(15px);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    25% {
+        left: 8%;
+        transform: scale(.92) translateY(4px);
+    }
+
+    50% {
+        left: 42%;
+        transform: scale(1) translateY(-2px);
+    }
+
+    72% {
+        left: 72%;
+        transform: scale(1.04) translateY(3px);
+    }
+
+    88% {
+        left: 105%;
+        opacity: 1;
+        transform: scale(1.08) translateY(-1px);
+    }
+
+    100% {
+        left: 135%;
+        opacity: 0;
+        transform: scale(1.1) translateY(0);
+    }
+}
+
+@keyframes suspension {
+    from {
+        transform: translateY(-1px) rotate(-.15deg);
+    }
+
+    to {
+        transform: translateY(2px) rotate(.15deg);
+    }
+}
+
+@keyframes shadowMotion {
+    from {
+        transform: scaleX(.94);
+        opacity: .65;
+    }
+
+    to {
+        transform: scaleX(1.04);
+        opacity: .9;
+    }
+}
+
+@keyframes roadSpeed {
+    from {
+        transform: translateX(-50%) translateY(-180px) scale(.5);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .8;
+    }
+
+    to {
+        transform: translateX(-50%) translateY(220px) scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes openingText {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(25px);
+    }
+
+    12% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    48% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    62% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes companyReveal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.75);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes revealLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 180px;
+    }
+}
+
+@keyframes actionsReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes cinematicLight {
+    0%,100% {
+        transform: translateX(-20%);
+        opacity: .2;
+    }
+
+    50% {
+        transform: translateX(20%);
+        opacity: .7;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .hero {
+        min-height: 100svh;
+        height: 100svh;
+    }
+
+    .hero-commercial-text {
+        top: 25%;
+    }
+
+    .hero-commercial-text h1 {
+        font-size: clamp(3rem, 14vw, 5rem);
+    }
+
+    .hero-commercial-text p {
+        font-size: .65rem;
+        letter-spacing: .14em;
+    }
+
+    .hero-car-motion {
+        width: 470px;
+        bottom: 25%;
+    }
+
+    .hero-company-reveal {
+        top: 42%;
+    }
+
+    .hero-company-reveal strong {
+        font-size: 4.3rem;
+    }
+
+    .hero-company-reveal > span {
+        letter-spacing: .22em;
+    }
+
+    .hero-actions {
+        bottom: 6%;
+        width: 90%;
+    }
+
+    .hero-actions .btn {
+        min-width: 150px;
+    }
+}

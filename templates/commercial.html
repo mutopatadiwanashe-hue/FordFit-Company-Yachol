@@ -1,28 +1,73 @@
 {% extends "base.html" %}
 {% block title %}FordFit Commercial | FordFit Company Yachol{% endblock %}
+
 {% block content %}
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/commercial.css') }}">
+
 <section class="commercial-stage">
-  <div class="commercial-backdrop"></div>
-  <div class="commercial-light"></div>
-  <div class="commercial-copy">
-    <p class="commercial-eyebrow">FORD FIT COMPANY YACHOL</p>
-    <h1>DRIVE WITH CONFIDENCE</h1>
-    <p>Performance - Protection - Specialist Care</p>
-  </div>
-  <div class="commercial-road"><div class="road-line"></div></div>
-  <div class="commercial-car">
-    <img src="{{ url_for('static', filename='images/car-branded-concept.png') }}" alt="FordFit branded vehicle">
-  </div>
-  <div class="tire-reveal"></div>
-  <div class="fordfit-final">
-    <span class="fordfit-small">FORD FIT</span>
-    <strong>FORD FIT</strong>
-    <span class="fordfit-tagline">COMPANY YACHOL</span>
-  </div>
+
+    <!-- DRAMATIC BACKGROUND -->
+    <div class="commercial-backdrop"></div>
+
+    <div class="commercial-sky-glow"></div>
+
+    <!-- HEADLINE -->
+    <div class="commercial-copy">
+        <p class="commercial-eyebrow">FORD FIT COMPANY YACHOL</p>
+        <h1>DRIVE WITH CONFIDENCE</h1>
+        <p>Performance • Protection • Specialist Care</p>
+    </div>
+
+    <!-- ROAD -->
+    <div class="commercial-road">
+        <div class="road-line road-line-1"></div>
+        <div class="road-line road-line-2"></div>
+        <div class="road-line road-line-3"></div>
+        <div class="road-line road-line-4"></div>
+        <div class="road-line road-line-5"></div>
+    </div>
+
+    <!-- CAR -->
+    <div class="commercial-car">
+        <div class="car-shadow"></div>
+
+        <img
+            src="{{ url_for('static', filename='images/car-branded-concept.png') }}"
+            alt="FordFit branded vehicle"
+        >
+    </div>
+
+    <!-- SPEED / DUST EFFECT -->
+    <div class="speed-streaks">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- TIRE REVEAL -->
+    <div class="tire-reveal"></div>
+
+    <!-- FINAL BRAND -->
+    <div class="fordfit-final">
+        <span class="fordfit-small">FORD FIT</span>
+
+        <strong>FORD FIT</strong>
+
+        <span class="fordfit-tagline">
+            COMPANY YACHOL
+        </span>
+
+        <div class="final-line"></div>
+    </div>
+
 </section>
+
 <section class="commercial-info">
-  <p>FordFit Company Yachol</p>
-  <h2>Products. Motion. Specialist care.</h2>
+    <p>FordFit Company Yachol</p>
+    <h2>Products. Motion. Specialist Care.</h2>
 </section>
+
 {% endblock %}
