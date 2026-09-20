@@ -360,3 +360,170 @@ ul{margin:0;padding:0;list-style:none}
   .brand{font-size:1.3rem}
   .car-card{box-shadow:0 30px 60px -20px rgba(0,0,0,.6),8px 8px 0 var(--hivis)}
 }
+/* =========================================
+   FORDFIT INNER PAGES — PREMIUM DESIGN
+   ========================================= */
+
+.page-hero,
+.inner-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 70px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(5,10,18,.96), rgba(15,35,55,.88)),
+        radial-gradient(circle at 50% 30%, rgba(0,170,255,.18), transparent 55%);
+}
+
+.page-hero h1,
+.inner-hero h1 {
+    font-size: clamp(42px, 7vw, 90px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin: 0 0 20px;
+}
+
+.page-hero p,
+.inner-hero p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: .82;
+}
+
+.about-section,
+.services-section,
+.products-section,
+.gallery-section,
+.content-section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 90px 24px;
+}
+
+.about-section img,
+.services-section img,
+.products-section img,
+.gallery-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 22px;
+    transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.about-section img:hover,
+.services-section img:hover,
+.products-section img:hover,
+.gallery-section img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 25px 70px rgba(0,0,0,.35);
+}
+
+.about-section,
+.services-section,
+.products-section {
+    line-height: 1.8;
+}
+
+.about-section h2,
+.services-section h2,
+.products-section h2,
+.gallery-section h2,
+.content-section h2 {
+    font-size: clamp(30px, 5vw, 55px);
+    margin-bottom: 25px;
+    font-weight: 850;
+}
+
+.about-section p,
+.services-section p,
+.products-section p,
+.content-section p {
+    font-size: 17px;
+    opacity: .86;
+}
+
+.services-grid,
+.products-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 45px;
+}
+
+.service-card,
+.product-card,
+.gallery-item,
+.info-card {
+    border-radius: 24px;
+    padding: 30px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.10);
+    backdrop-filter: blur(14px);
+    transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+}
+
+.service-card:hover,
+.product-card:hover,
+.gallery-item:hover,
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,.3);
+    border-color: rgba(0,170,255,.45);
+}
+
+.service-card h3,
+.product-card h3,
+.info-card h3 {
+    font-size: 25px;
+    margin: 18px 0 12px;
+}
+
+.gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.gallery-item {
+    padding: 0;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+@media (max-width: 700px) {
+    .page-hero,
+    .inner-hero {
+        min-height: 48vh;
+        padding-top: 100px;
+    }
+
+    .about-section,
+    .services-section,
+    .products-section,
+    .gallery-section,
+    .content-section {
+        padding: 65px 18px;
+    }
+
+    .service-card,
+    .product-card,
+    .info-card {
+        padding: 24px;
+    }
+}
