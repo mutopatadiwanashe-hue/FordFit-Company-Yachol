@@ -1,6 +1,39 @@
-﻿{% extends "base.html" %}
-{% block title %}FordFit Company Yachol | Ford Specialist{% endblock %}
-{% block content %}
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FordFit Company Yachol | Ford Specialist</title>
+  <meta name="description" content="FordFit Company Yachol â€” independent Ford specialist, quality automotive products and reliable service.">
+  <meta name="theme-color" content="#0B1D36">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1D36'/%3E%3Cpath d='M-4 26 68 8v9L-4 35zM-4 44 68 26v9L-4 53z' fill='%23D3F23A'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="page-home">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <a class="brand" href="/" aria-label="FordFit Company Yachol â€” home">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-text"><span>Ford<em>Fit</em></span><small>Company Yachol</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">â˜°</button>
+  <nav class="nav" aria-label="Main">
+    <a href="/" class="active">Home</a>
+    <a href="./about.html" class="">About</a>
+    <a href="./services.html" class="">Services</a>
+    <a href="./products.html" class="">Products</a>
+    <a href="./gallery.html" class="">Gallery</a>
+    <a href="./commercial.html" class="">Commercial</a>
+    <a href="./contact.html" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="hero">
@@ -23,7 +56,7 @@
     <div class="car-stage" aria-label="FordFit vehicle motion graphic">
       <div class="car-glow"></div>
       <figure class="car-card">
-        <img class="hero-car" src="./images/car-original-crop.jpg" alt="Vehicle supplied for the FordFit motion concept">
+        <img class="hero-car" src="./static/images/car-original-crop.jpg" alt="Vehicle supplied for the FordFit motion concept">
         <figcaption class="plate-label">FordFit Company Yachol</figcaption>
       </figure>
       <span class="float-badge b1">Ford Specialist</span>
@@ -54,7 +87,7 @@
 <section class="split-section ceo-section">
   <figure class="ceo-figure reveal">
     <div class="ceo-frame">
-      <img src="./images/ceo-original.jpg" alt="CEO of FordFit Company Yachol" width="1152" height="1536">
+      <img src="./static/images/ceo-original.jpg" alt="CEO of FordFit Company Yachol" width="1152" height="1536">
     </div>
     <figcaption><strong>Chief Executive Officer</strong><span>FordFit Company Yachol</span></figcaption>
   </figure>
@@ -125,9 +158,9 @@
     <h2>Products we feature</h2>
   </div>
   <div class="product-grid">
-    <article class="reveal"><img src="./images/castrol-original.jpg" alt="Castrol product" loading="lazy"><span class="tag">Lubricants</span><h3>Castrol</h3><p>Automotive lubricants and oils.</p></article>
-    <article class="reveal d1"><img src="./images/fuchs-gt1-original.jpg" alt="Fuchs TITAN product" loading="lazy"><span class="tag">Lubricants</span><h3>Fuchs</h3><p>German-engineered lubricants.</p></article>
-    <article class="reveal d2"><img src="./images/mixed-products-original.jpg" alt="Automotive products" loading="lazy"><span class="tag">Filters &amp; fluids</span><h3>Filters &amp; fluids</h3><p>Selected automotive consumables.</p></article>
+    <article class="reveal"><img src="./static/images/castrol-original.jpg" alt="Castrol product" loading="lazy"><span class="tag">Lubricants</span><h3>Castrol</h3><p>Automotive lubricants and oils.</p></article>
+    <article class="reveal d1"><img src="./static/images/fuchs-gt1-original.jpg" alt="Fuchs TITAN product" loading="lazy"><span class="tag">Lubricants</span><h3>Fuchs</h3><p>German-engineered lubricants.</p></article>
+    <article class="reveal d2"><img src="./static/images/mixed-products-original.jpg" alt="Automotive products" loading="lazy"><span class="tag">Filters &amp; fluids</span><h3>Filters &amp; fluids</h3><p>Selected automotive consumables.</p></article>
   </div>
   <p style="text-align:center;margin-top:40px"><a class="text-link" href="./products.html">Browse all products â†’</a></p>
 </section>
@@ -151,6 +184,50 @@
   <p>Call FordFit Company Yachol.</p>
   <a class="btn primary" href="tel:+263780129773">+263 780 129 773</a>
 </section>
-{% endblock %}
+</main>
 
-
+<footer class="footer">
+  <div class="tape-divider" aria-hidden="true"></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text"><span style="color:#fff">Ford<em>Fit</em></span><small>Company Yachol</small></span>
+      </a>
+      <p>Independent Ford specialist â€” quality automotive products and reliable service.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./gallery.html">Gallery</a></li>
+        <li><a href="./commercial.html">Commercial</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Brands</h4>
+      <ul>
+        <li>Fuchs Â· Castrol</li>
+        <li>Caltex Â· Engen Â· Total</li>
+        <li>GUD Filters</li>
+        <li>Safeline Brake Pads</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul>
+        <li>Call / WhatsApp:<br><a href="tel:+263780129773"><strong>+263 780 129 773</strong></a></li>
+        <li><a href="https://wa.me/263780129773" target="_blank" rel="noopener">Message on WhatsApp â†’</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Â© <span id="year"></span> FordFit Company Yachol</span>
+    <span>Independent Ford Specialist</span>
+  </div>
+</footer>
+<script src="./static/js/main.js"></script>
+</body>
+</html>
