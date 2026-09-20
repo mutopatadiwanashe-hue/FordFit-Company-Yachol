@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="./static/css/style.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body class="page-commercial">
@@ -34,30 +34,74 @@
 </header>
 
 <main id="main">
-<link rel="stylesheet" href="../static/css/commercial.css">
+
+<link rel="stylesheet" href="./static/css/commercial.css">
+
 <section class="commercial-stage">
-  <div class="commercial-backdrop"></div>
-  <div class="commercial-light"></div>
-  <div class="commercial-copy">
-    <p class="commercial-eyebrow">FORD FIT COMPANY YACHOL</p>
-    <h1>DRIVE WITH CONFIDENCE</h1>
-    <p>Performance - Protection - Specialist Care</p>
-  </div>
-  <div class="commercial-road"><div class="road-line"></div></div>
-  <div class="commercial-car">
-    <img src="../static/images/car-branded-concept.png" alt="FordFit branded vehicle">
-  </div>
-  <div class="tire-reveal"></div>
-  <div class="fordfit-final">
-    <span class="fordfit-small">FORD FIT</span>
-    <strong>FORD FIT</strong>
-    <span class="fordfit-tagline">COMPANY YACHOL</span>
-  </div>
+
+    <!-- DRAMATIC BACKGROUND -->
+    <div class="commercial-backdrop"></div>
+
+    <div class="commercial-sky-glow"></div>
+
+    <!-- HEADLINE -->
+    <div class="commercial-copy">
+        <p class="commercial-eyebrow">FORD FIT COMPANY YACHOL</p>
+        <h1>DRIVE WITH CONFIDENCE</h1>
+        <p>Performance â€¢ Protection â€¢ Specialist Care</p>
+    </div>
+
+    <!-- ROAD -->
+    <div class="commercial-road">
+        <div class="road-line road-line-1"></div>
+        <div class="road-line road-line-2"></div>
+        <div class="road-line road-line-3"></div>
+        <div class="road-line road-line-4"></div>
+        <div class="road-line road-line-5"></div>
+    </div>
+
+    <!-- CAR -->
+    <div class="commercial-car">
+        <div class="car-shadow"></div>
+
+        <img
+            src="./static/images/car-branded-concept.png"
+            alt="FordFit branded vehicle"
+        >
+    </div>
+
+    <!-- SPEED / DUST EFFECT -->
+    <div class="speed-streaks">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- TIRE REVEAL -->
+    <div class="tire-reveal"></div>
+
+    <!-- FINAL BRAND -->
+    <div class="fordfit-final">
+        <span class="fordfit-small">FORD FIT</span>
+
+        <strong>FORD FIT</strong>
+
+        <span class="fordfit-tagline">
+            COMPANY YACHOL
+        </span>
+
+        <div class="final-line"></div>
+    </div>
+
 </section>
+
 <section class="commercial-info">
-  <p>FordFit Company Yachol</p>
-  <h2>Products. Motion. Specialist care.</h2>
+    <p>FordFit Company Yachol</p>
+    <h2>Products. Motion. Specialist Care.</h2>
 </section>
+
 </main>
 
 <footer class="footer">
@@ -102,13 +146,6 @@
     <span>Independent Ford Specialist</span>
   </div>
 </footer>
-<script src="../static/js/main.js"></script>
-<section class="commercial-video">
-    <video controls autoplay muted playsinline preload="metadata">
-        <source src="./static/videos/fordfit-commercial.mp4" type="video/mp4">
-        Your browser does not support the video.
-    </video>
-</section>
+<script src="./static/js/main.js"></script>
 </body>
 </html>
-
